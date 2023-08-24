@@ -46,9 +46,8 @@ sudo nmap -sV 10.0.2.10
   - rpcbind
   - net-bios-ssn
   - exec
-  - login?
+  - login
   - tcpwrapped
-  - java-rmi
   - bindshell
   - nfs
   - mysql
@@ -70,8 +69,7 @@ sudo nmap -sV 10.0.2.10
 
 <kbd>![](img/vnc_3.3.png)</kbd>
 
-  
-
+---
 
 ### Задание 2
 
@@ -85,3 +83,29 @@ sudo nmap -sV 10.0.2.10
 - Как отвечает сервер?
 
 *Приведите ответ в свободной форме.*
+
+**Ответ:**
+
+- Проведем сканирование **nmap** в режиме **SYN**:
+```
+sudo nmap -sS 10.0.2.10
+```
+<kbd>![](img/wireshark_syn.png)</kbd>
+
+- Проведем сканирование **nmap** в режиме **FIN**:
+```
+sudo nmap -sA 10.0.2.10
+```
+<kbd>![](img/wireshark_fin.png)</kbd>
+
+- Проведем сканирование **nmap** в режиме **Xmas**:
+```
+sudo nmap -sX 10.0.2.10
+```
+<kbd>![](img/wireshark_xmas.png)</kbd>
+
+- Проведем сканирование **nmap** в режиме **UDP**:
+```
+sudo nmap -sU 10.0.2.10
+```
+<kbd>![](img/wireshark_udp.png)</kbd>
